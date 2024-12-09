@@ -1,0 +1,255 @@
+/* Fanta Custom Styles */
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa; /* Light grey background */
+  color: #333; /* Dark text */
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Centered content */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Button Styling */
+button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #2980b9; /* Hover effect */
+}
+
+button:disabled {
+  background-color: #b0c4de; /* Disabled state */
+  cursor: not-allowed;
+}
+
+/* Input Fields */
+input,
+textarea {
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3498db; /* Focus border color */
+  outline: none;
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4 {
+  color: #2c3e50;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+/* Error Messages */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Form Elements */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #3498db;
+}
+
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Section Styling */
+section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs */
+.tab-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.tab-button {
+  background: transparent;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.tab-button.selected-tab {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+/* To-Do List Item */
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.todo-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.todo-buttons button {
+  border: none;
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-buttons button:hover {
+  background-color: #2980b9;
+}
+
+/* Task completion styles */
+.todo-complete {
+  position: relative;
+}
+
+.todo-complete::after {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #27ae60;
+}
+
+.todo-item.completed {
+  background-color: #ecf0f1;
+  text-decoration: line-through;
+  color: #7f8c8d;
+}
+
+/* Hover effect for todo items */
+.todo-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .todo-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tab-container {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Keyframe Animation */
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.5s ease-in-out;
+}
+
